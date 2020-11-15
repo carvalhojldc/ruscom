@@ -1,0 +1,11 @@
+USAGE:
+    ruscom [FLAGS] [OPTIONS]
+
+FLAGS:
+    -h, --help       Prints help information
+    -l, --list       Show list of available serial ports
+    -V, --version    Prints version information
+
+OPTIONS:
+    -b, --baud <baud>    The baud rate to connect
+    -p, --port <port>    The device path to a serial port
