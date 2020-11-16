@@ -42,12 +42,13 @@ fn args() -> ArgMatches<'static> {
             Arg::with_name(ARG_LIST[0])
                 .short("l")
                 .long("list")
-                .conflicts_with_all(&[ARG_LIST[1], ARG_LIST[2]])
                 .help("Show list of available serial ports"),
         )
         .arg(
             Arg::with_name(ARG_LIST[1])
                 .requires(ARG_LIST[2])
+                .required(true)
+                .conflicts_with(ARG_LIST[0])
                 .short("p")
                 .long("port")
                 .takes_value(true)
