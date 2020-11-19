@@ -18,6 +18,7 @@ pub fn show_available_ports() {
                 1 => println!("  > Found 1 port:"),
                 n => println!("  > Found {} ports:", n),
             };
+            println!();
             for p in ports {
                 println!("  {}", p.port_name);
                 match p.port_type {
@@ -42,6 +43,7 @@ pub fn show_available_ports() {
                         println!("    Type: Unknown");
                     }
                 }
+                println!();
             }
         }
         Err(e) => {
